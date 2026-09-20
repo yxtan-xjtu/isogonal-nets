@@ -88,17 +88,22 @@
       </div>
 
       <div class="publication-badges" aria-label="Publication details">
-        <div class="venue-lines">
-          <p class="venue-line">Accepted for presentation at SIGGRAPH Asia 2026</p>
-          <p class="venue-line venue-line-secondary">Published in ACM Transactions on Graphics (TOG)</p>
+        <p class="venue-line">Accepted for presentation at SIGGRAPH Asia 2026</p>
+
+        <div class="venue-logos">
+          <img
+            class="venue-logo venue-logo-siggraph"
+            src="assets/siggraph-asia-2026-logo.svg"
+            alt="SIGGRAPH Asia 2026"
+            onerror="if (this.dataset.fallback) { this.hidden = true; document.getElementById('venue-logo-fallback').hidden = false; } else { this.dataset.fallback = '1'; this.src = 'assets/siggraph-asia-2026-logo.png'; }"
+          />
+          <span id="venue-logo-fallback" class="venue-logo-fallback" hidden>SIGGRAPH Asia 2026</span>
+
+          <div class="venue-acm">
+            <img class="venue-logo venue-logo-acm" src="assets/acm-logo.svg" alt="ACM" />
+            <span class="venue-acm-caption">Transactions on Graphics (TOG)</span>
+          </div>
         </div>
-        <img
-          class="venue-logo"
-          src="assets/siggraph-asia-2026-logo.png"
-          alt="SIGGRAPH Asia 2026"
-          onerror="this.hidden=true;document.getElementById('venue-logo-fallback').hidden=false;"
-        />
-        <span id="venue-logo-fallback" class="venue-logo-fallback" hidden>SIGGRAPH Asia 2026</span>
       </div>
 
       <a class="doi-link" href="https://doi.org/10.1145/3842568" target="_blank" rel="noopener">
