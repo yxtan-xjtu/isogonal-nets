@@ -317,22 +317,23 @@ main {
   max-width: 830px;
   margin: 18px auto 0;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 9px;
-  text-align: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.venue-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .venue-logo {
-  box-sizing: content-box;
   height: 44px;
   width: auto;
   max-width: 100%;
-  padding: 9px 15px;
-  border-radius: 10px;
-  /* official SIGGRAPH Asia logo supplied in its inverted (white type) version,
-     which must sit on a dark backdrop to stay legible */
-  background: var(--teal-deep);
+  flex: 0 0 auto;
 }
 
 .venue-logo-fallback {
@@ -646,14 +647,11 @@ footer {
 
   .publication-badges {
     margin-top: 16px;
-    gap: 8px;
+    gap: 12px;
   }
 
-  .venue-logo {
-    height: 36px;
-    padding: 8px 12px;
-    border-radius: 8px;
-  }
+  .venue-lines { gap: 4px; }
+  .venue-logo { height: 34px; }
   .venue-logo-fallback { font-size: 13.5px; }
   .venue-line { font-size: 13px; }
 
