@@ -315,21 +315,27 @@ main {
 
 .publication-badges {
   max-width: 830px;
-  margin: 18px auto 0;
+  /* the bottom margin keeps the ACM caption clear of the DOI link below */
+  margin: 18px auto 26px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px 38px;
+}
+
+.venue-lines {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  text-align: center;
+  gap: 6px;
+  text-align: left;
 }
 
 .venue-logos {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 46px;
-  /* keeps room for the ACM caption that sits under the ACM logo */
-  padding-bottom: 36px;
+  gap: 24px;
 }
 
 .venue-logo {
@@ -353,7 +359,7 @@ main {
   top: calc(100% + 7px);
   left: 50%;
   transform: translateX(-50%);
-  width: 160px;
+  width: 170px;
   color: #40535a;
   font-size: 11.5px;
   font-weight: 520;
@@ -374,6 +380,11 @@ main {
   font-size: 14px;
   font-weight: 600;
   line-height: 1.6;
+}
+
+.venue-line-secondary {
+  color: #40535a;
+  font-weight: 520;
 }
 
 /* ---------- icon resource cards ---------- */
@@ -665,20 +676,21 @@ footer {
   .publication-note p { font-size: 13px; }
 
   .publication-badges {
-    margin-top: 16px;
-    gap: 12px;
+    margin: 16px auto 24px;
+    gap: 12px 20px;
   }
 
+  .venue-lines { gap: 4px; }
+
   .venue-logos {
-    gap: 26px;
-    padding-bottom: 32px;
+    gap: 18px;
   }
 
   .venue-logo-siggraph { height: 46px; }
   .venue-logo-acm { height: 35px; }
 
   .venue-acm-caption {
-    width: 136px;
+    width: 140px;
     font-size: 10.5px;
   }
 
