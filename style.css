@@ -314,22 +314,20 @@ main {
 /* ---------- publication badges ---------- */
 
 .publication-badges {
-  /* width of the SIGGRAPH Asia logo block */
-  --venue-block: 136px;
   max-width: 830px;
-  margin: 18px auto 0;
+  margin: 26px auto 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 16px 38px;
+  gap: 18px;
 }
 
 .venue-lines {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  text-align: left;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
 }
 
 .venue-logos {
@@ -337,7 +335,7 @@ main {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 46px;
 }
 
 .venue-logo {
@@ -345,17 +343,20 @@ main {
 }
 
 .venue-logo-siggraph {
-  width: var(--venue-block);
-  height: auto;
+  height: 50px;
+  width: auto;
 }
 
 .venue-acm {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 11px;
 }
 
-.venue-logo-acm { height: 40px; }
+.venue-logo-acm {
+  height: 44px;
+  width: auto;
+}
 
 .venue-acm-caption {
   color: #40535a;
@@ -675,28 +676,29 @@ footer {
   .publication-note p { font-size: 13px; }
 
   .publication-badges {
-    --venue-block: 120px;
-    margin: 16px auto 0;
-    gap: 12px 20px;
+    margin: 20px auto 0;
+    gap: 14px;
   }
 
-  .venue-lines { gap: 4px; }
+  .venue-lines { gap: 3px; }
 
   .venue-logos {
-    gap: 18px;
+    gap: 20px;
   }
 
-  /* on narrow screens the caption drops back under the ACM logo */
+  .venue-logo-siggraph { height: 42px; }
+
+  /* on narrow screens the caption drops under the ACM logo to keep the row compact */
   .venue-acm {
     flex-direction: column;
-    gap: 7px;
+    gap: 6px;
   }
 
-  .venue-logo-acm { height: 35px; }
+  .venue-logo-acm { height: 36px; }
 
   .venue-acm-caption {
     white-space: normal;
-    font-size: 10.4px;
+    font-size: 10.5px;
   }
 
   .venue-logo-fallback { font-size: 13.5px; }
