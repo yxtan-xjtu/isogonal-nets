@@ -324,10 +324,15 @@ main {
 }
 
 .venue-logo {
+  box-sizing: content-box;
   height: 44px;
   width: auto;
   max-width: 100%;
-  object-fit: contain;
+  padding: 9px 15px;
+  border-radius: 10px;
+  /* official SIGGRAPH Asia logo supplied in its inverted (white type) version,
+     which must sit on a dark backdrop to stay legible */
+  background: var(--teal-deep);
 }
 
 .venue-logo-fallback {
@@ -644,7 +649,11 @@ footer {
     gap: 8px;
   }
 
-  .venue-logo { height: 38px; }
+  .venue-logo {
+    height: 36px;
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
   .venue-logo-fallback { font-size: 13.5px; }
   .venue-line { font-size: 13px; }
 
