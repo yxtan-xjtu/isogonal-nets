@@ -311,6 +311,46 @@ main {
   font-size: 13px;
 }
 
+/* ---------- publication badges ---------- */
+
+.publication-badges {
+  max-width: 830px;
+  margin: 18px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  text-align: center;
+}
+
+.venue-logo {
+  height: 44px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.venue-logo-fallback {
+  color: var(--teal-deep);
+  font-size: 15px;
+  font-weight: 720;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.venue-line {
+  margin: 0;
+  color: var(--teal-deep);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.venue-line-secondary {
+  color: #40535a;
+  font-weight: 520;
+}
+
 /* ---------- icon resource cards ---------- */
 
 .hero-links {
@@ -598,6 +638,15 @@ footer {
   .authors { font-size: 17px; }
   .publication-note { padding: 18px; }
   .publication-note p { font-size: 13px; }
+
+  .publication-badges {
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  .venue-logo { height: 38px; }
+  .venue-logo-fallback { font-size: 13.5px; }
+  .venue-line { font-size: 13px; }
 
   .hero-links {
     grid-template-columns: 1fr 1fr;
