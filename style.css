@@ -314,6 +314,9 @@ main {
 /* ---------- publication badges ---------- */
 
 .publication-badges {
+  /* both logo blocks share this width: the ACM logo + its caption form one unit
+     that lines up with the width of the SIGGRAPH Asia logo */
+  --venue-block: 136px;
   max-width: 830px;
   /* the bottom margin keeps the ACM caption clear of the DOI link below */
   margin: 18px auto 26px;
@@ -340,16 +343,20 @@ main {
 
 .venue-logo {
   display: block;
-  width: auto;
-  max-width: 100%;
 }
 
-.venue-logo-siggraph { height: 52px; }
+.venue-logo-siggraph {
+  width: var(--venue-block);
+  height: auto;
+}
 
 .venue-acm {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: var(--venue-block);
+  height: 40px;
 }
 
 .venue-logo-acm { height: 40px; }
@@ -357,11 +364,11 @@ main {
 .venue-acm-caption {
   position: absolute;
   top: calc(100% + 7px);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 170px;
+  left: 0;
+  width: 100%;
+  text-align: center;
   color: #40535a;
-  font-size: 11.5px;
+  font-size: 11.8px;
   font-weight: 520;
   line-height: 1.35;
 }
@@ -676,6 +683,7 @@ footer {
   .publication-note p { font-size: 13px; }
 
   .publication-badges {
+    --venue-block: 120px;
     margin: 16px auto 24px;
     gap: 12px 20px;
   }
@@ -686,12 +694,11 @@ footer {
     gap: 18px;
   }
 
-  .venue-logo-siggraph { height: 46px; }
+  .venue-acm { height: 35px; }
   .venue-logo-acm { height: 35px; }
 
   .venue-acm-caption {
-    width: 140px;
-    font-size: 10.5px;
+    font-size: 10.4px;
   }
 
   .venue-logo-fallback { font-size: 13.5px; }
