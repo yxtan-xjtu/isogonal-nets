@@ -254,6 +254,21 @@ main {
   font-size: 14px;
 }
 
+.affiliation em {
+  font-style: italic;
+}
+
+.authors a {
+  color: inherit;
+  border-bottom: 1px solid rgba(40, 169, 180, 0.38);
+  transition: color 160ms ease, border-color 160ms ease;
+}
+
+.authors a:hover {
+  color: var(--teal-deep);
+  border-bottom-color: var(--teal);
+}
+
 .publication-note {
   max-width: 830px;
   margin: 28px auto 0;
@@ -390,14 +405,17 @@ main {
 /* ---------- icon resource cards ---------- */
 
 .hero-links {
-  max-width: 760px;
+  max-width: 900px;
   margin: 32px auto 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 14px;
 }
 
 .hero-resource {
+  flex: 1 1 150px;
+  max-width: 190px;
   min-height: 124px;
   padding: 18px 18px 16px;
   display: flex;
@@ -632,8 +650,8 @@ footer {
   .signature-copy span {
     font-size: 17px;
   }
-  .hero-links {
-    grid-template-columns: repeat(2, 1fr);
+  .hero-resource {
+    flex: 0 1 calc(25% - 11px);
   }
   .project-header {
     padding: 50px 28px 46px;
@@ -705,11 +723,11 @@ footer {
   .venue-line { font-size: 13px; }
 
   .hero-links {
-    grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
 
   .hero-resource {
+    flex: 0 1 calc(50% - 5px);
     min-height: 110px;
     padding: 14px;
   }
