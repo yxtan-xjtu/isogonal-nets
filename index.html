@@ -176,7 +176,10 @@
 
     <section class="teaser-section" aria-label="Project teaser">
       <div class="teaser-frame">
-        <img class="teaser-image" src="assets/teaser.png" alt="Project teaser image" />
+        <picture>
+          <source type="image/webp" srcset="assets/teaser.webp" />
+          <img class="teaser-image" src="assets/teaser.jpg" alt="Project teaser image" />
+        </picture>
       </div>
     </section>
 
@@ -217,7 +220,7 @@
           </div>
 
           <div class="video-shell">
-            <video controls preload="metadata">
+            <video controls preload="none" poster="assets/video-poster.webp">
               <source src="assets/video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -230,7 +233,7 @@
           </div>
 
           <div class="video-shell">
-            <video controls preload="metadata">
+            <video controls preload="none" poster="assets/fastforward-poster.webp">
               <source src="assets/fastforward.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
